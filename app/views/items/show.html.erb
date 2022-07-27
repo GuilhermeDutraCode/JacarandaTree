@@ -1,0 +1,15 @@
+<h1><%= @item.name %></h1>
+
+<%= image_tag @item.image, :class => 'feature' if @item.image.present? %>
+<ul>
+    <li>Name: <%= @item.name %></li>
+    <li>Description: <%= @item.description %></li>
+    
+</ul>
+
+
+
+<div class="controls">
+    <%= link_to 'Edit Item Listing', edit_item_path(@item) %>
+    <%= link_to 'Delete Item Listing', @item, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>
