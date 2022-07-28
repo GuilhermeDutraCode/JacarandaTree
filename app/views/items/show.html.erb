@@ -7,9 +7,13 @@
     
 </ul>
 
-
-
+    <%=link_to 'Buy This Item', checkout_path(params[:id])  %>
+ <% if @item.user == @current_user %>
 <div class="controls">
     <%= link_to 'Edit Item Listing', edit_item_path(@item) %>
     <%= link_to 'Delete Item Listing', @item, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+    
 </div>
+
+<% end %>
+

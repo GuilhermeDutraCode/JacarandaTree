@@ -19,7 +19,11 @@ class ItemsController < ApplicationController
   def destroy
     item = Item.find params[:id]
     item.destroy
-    redirect_to items_path
+    if (@current_user == item.user)
+      redirect_to items_path 
+    else
+      render "finished"
+    end  
   end
 
   def update
@@ -30,7 +34,7 @@ class ItemsController < ApplicationController
 
   def create
     item = Item.create item_params
-    # @current_user.items << item # Give the new mixtape to the current user
+    @current_user.items << item # Give the new mixtape to the current user
     redirect_to items_path # IRL redirect to mixtape or somewhere
   end
 

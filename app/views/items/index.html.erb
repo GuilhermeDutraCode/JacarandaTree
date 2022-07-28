@@ -5,7 +5,9 @@
     </div>
 
 <% @items.each do |item| %>
-    <%= image_tag item.image %>
+    
+    <%= image_tag item.image, :class => "thumb" %>
+
     <ul>
         <li>Name: <%= link_to item.name, item %></li>
         <li>Price: <%= item.price %></li>

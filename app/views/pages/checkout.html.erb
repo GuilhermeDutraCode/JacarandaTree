@@ -1,0 +1,22 @@
+<h1> Checkout</h1>
+<body>
+<p>You selected the following item: </p>
+
+<p> Please insert your payment detailes bellow </p>
+
+<form action=<%="/finished/#{params[:id]}"%> method='post'>
+
+  <label for="cname"> Name on Card :</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="cnumber">Card Number:</label><br>
+  <input type="integer" id="cnumber" name="cnumber" value=""><br><br>
+  <label for="pin"> 3 Digits at the back of the Card:
+  <input type="integer" id="pin" name="pin" value=""><br><br>
+</form> 
+
+  <%= button_to "checkout" ,@item, :method => :delete, :class => "btn btn-success"%>
+
+
+
+<p>If you click the "Submit" button,you will be charged".</p>
+<body>

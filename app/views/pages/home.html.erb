@@ -3,3 +3,9 @@
 <p>All Items.</p>
 
 <p>Welcome back user <%= @current_user.email if @current_user.present? %></p>
+
+
+<div class="controls">
+    <%= link_to 'See all items listings' , items_path %>
+    <%= link_to 'Browse by category', categories_path %>
+</div>
