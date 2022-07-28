@@ -43,6 +43,6 @@ class ItemsController < ApplicationController
   private
   # Strong params
   def item_params
-    params.require(:item).permit(:name, :price, :description, :image)
+    params.require(:item).permit(:name, :price, :description, :image, :category_id)
   end
 end

@@ -1,24 +1,24 @@
 <h1>All Items</h1>
+<div class="container">
+    <div class="controls">
+        <%= link_to 'Create New Listing', new_item_path(@item) %>
+        </div>
 
-<div class="controls">
-    <%= link_to 'Create New Listing', new_item_path(@item) %>
-    </div>
+    <% @items.each do |item| %>
+        <div class="box">
+        <%= image_tag item.image, :class => "thumb" %>
 
-<% @items.each do |item| %>
-    
-    <%= image_tag item.image, :class => "thumb" %>
-
-    <ul>
-        <li>Name: <%= link_to item.name, item %></li>
-        <li>Price: <%= item.price %></li>
+            <ul>
+                <li>Name: <%= link_to item.name, item %></li>
+                <li>Price: <%= item.price %></li>
+            
+                <li>Description: <%= item.description  %></li>
+            
+                <li>Image: <%= item.image %></li>
+            </ul>
+        </div>
         
-        <li>Description: <%= item.description  %></li>
-        
-        <li>Image: <%= item.image %></li>
-    </ul>
 
+    <% end %>
     
-
-<% end %>
-
-    
+</div> 

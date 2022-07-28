@@ -1,6 +1,30 @@
 body {
-    background-color: #A1CCA5;
+    background-color:  #111D13;
+    color: white;
+}
+.container{
+    width: 960px;
+    margin: 0 auto;
+    background-color:  #A1CCA5; 
+    color: #111D13;
 }
 .thumb {
     max-height: 10em;
+}
+
+.box {
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+.title {
+    background-image: url(https://aboriginal-art.com.au/wp-content/uploads/2021/11/Hail-Dreaming-Ilpilli-2000-152cm-by-46cm.jpg);
+    text-align: center;
+    color: #28382b;
+    text-decoration: bold;
+    
+}
+
+mark {
+   background-color: rgba(255,255,255,0.5);
 }

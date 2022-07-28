@@ -1,2 +1,17 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<h1>Categories</h1>
+<%= @category.name %>
+<% @category.items.each do |item|%>
+     <div class="box">
+        <%= image_tag item.image, :class => "thumb" %>
+
+            <ul>
+                <li>Name: <%= link_to item.name, item %></li>
+                <li>Price: <%= item.price %></li>
+            
+                <li>Description: <%= item.description  %></li>
+            
+                <li>Image: <%= item.image %></li>
+            </ul>
+        </div>
+        
+<%end%>

@@ -6,7 +6,7 @@
     <li>Description: <%= @item.description %></li>
     
 </ul>
-
+<% if @current_user.present?%>
     <%=link_to 'Buy This Item', checkout_path(params[:id])  %>
  <% if @item.user == @current_user %>
 <div class="controls">
@@ -14,6 +14,6 @@
     <%= link_to 'Delete Item Listing', @item, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
     
 </div>
-
+<%end%>
 <% end %>
 
